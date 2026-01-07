@@ -1,3 +1,8 @@
-git add .
-git commit -m "Added lightbox modal gallery"
-git push origin main
+one-page-kids-clothing/
+│
+├── index.html
+├── style.css
+└── images/
+    ├── kids1.jpg
+    ├── kids2.jpg
+    ├── kids3.jpg
