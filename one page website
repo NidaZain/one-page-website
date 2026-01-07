@@ -6,3 +6,11 @@ one-page-kids-clothing/
     ├── kids1.jpg
     ├── kids2.jpg
     ├── kids3.jpg
+
+
+git init
+git add .
+git commit -m "One-page kids clothing website with lightbox gallery"
+git branch -M main
+git remote add origin https://github.com/yourusername/your-repo-name.git
+git push -u origin main
