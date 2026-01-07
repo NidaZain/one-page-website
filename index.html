@@ -1,23 +1,73 @@
-<script>
-  function openModal(src) {
-    document.getElementById("lightbox").style.display = "block";
-    document.getElementById("lightbox-img").src = src;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kids Clothing Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  function closeModal() {
-    document.getElementById("lightbox").style.display = "none";
-  }
-</script>
-<section id="gallery">
-  <h2>Kids Cars Gallery</h2>
+<!-- ===== HEADER ===== -->
+<header>
+  <h1>Happy Kids Clothing</h1>
+  <p>Comfortable • Colorful • Cute</p>
+</header>
 
-  <img src="img/car1.jpg" class="gallery-img" onclick="openModal(this.src)">
-  <img src="img/car2.jpg" class="gallery-img" onclick="openModal(this.src)">
-  <img src="img/car3.jpg" class="gallery-img" onclick="openModal(this.src)">
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    We provide high-quality kids clothing designed for comfort, fun,
+    and everyday adventures. Our clothes are made with love for kids of all ages.
+  </p>
 </section>
 
-<!-- Modal -->
-<div id="lightbox" onclick="closeModal()">
+<!-- ===== GALLERY SECTION ===== -->
+<section id="gallery">
+  <h2>Kids Clothing Collection</h2>
+
+  <div class="gallery-container">
+    <img src="images/kids1.jpg" alt="Kids Outfit 1" onclick="openLightbox(this.src)">
+    <img src="images/kids2.jpg" alt="Kids Outfit 2" onclick="openLightbox(this.src)">
+    <img src="images/kids3.jpg" alt="Kids Outfit 3" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<!-- ===== LIGHTBOX MODAL ===== -->
+<div id="lightbox" onclick="closeLightbox()">
   <span class="close">&times;</span>
   <img id="lightbox-img">
 </div>
+
+<!-- ===== CONTACT FORM ===== -->
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© 2026 Happy Kids Clothing. All Rights Reserved.</p>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  function openLightbox(imageSrc) {
+    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox-img").src = imageSrc;
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
+
